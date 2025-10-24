@@ -1,7 +1,7 @@
 body, html{
 height: 100%;
 margin: 0;
-overflow: hidden;
+overflow: auto;
 /* two different images: left and right */
 background-image: url("img/colorful\ wave\ background_1\ copy.png"), url("img/colorful\ wave\ background_2.png");
 background-repeat: no-repeat, no-repeat;
@@ -187,6 +187,150 @@ transform: translateY(-2px); /* Slight lift effect */
   to {
     background-position: 200% center;
   }
+}
+
+/* Responsive: mobile phones */
+@media (max-width: 600px) {
+
+  /* keep space for fixed navigation on top */
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;               /* fixed nav height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    margin: 0;                  /* override desktop margin */
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+  }
+
+  /* ensure the container content sits below the fixed nav */
+  .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 84px 0 20px; /* top padding >= nav height to avoid overlap */
+    position: relative;    /* so content sits above pseudo backgrounds */
+    z-index: 2;
+  }
+
+  /* make main centered and avoid extra side margins */
+  .main{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* heading: bigger, but keep exactly 20px margin on each side */
+  .heading {
+    font-size: 48px;                         /* larger on mobile */
+    line-height: 1.02;
+    padding: 18px;
+    border-radius: 18px;
+    text-align: center;
+    max-width: calc(100% - 0px);            /* reserve 20px on both sides */
+    margin: 0 10px;                          /* enforce 20px side margin */
+    box-shadow: none;
+    word-break: normal;
+  }
+
+  /* intro paragraph: smaller, centered, no left margin */
+  .intro-paragraph {
+    font-size: 16px;
+    margin-left: 0;
+    text-align: center;
+    padding: 0 6px 12px;
+    width: 100%;
+  }
+
+  /* stack buttons vertically and center them */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin: 12px auto 0;
+    align-items: center;
+    padding: 0 8px;
+  }
+
+  .button {
+    padding: 12px 20px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  /* hide large decorative svg on small screens */
+  .vector-5 {
+    display: none;
+  }
+
+  /* remove original large background images and replace with rotated top/bottom pseudo elements */
+  body, html {
+    background-image: none;
+    overflow-x: hidden;
+  }
+
+  /* top background image rotated and partially visible */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    transform-origin: center;
+    width: 140%;
+    height: 620px;
+    background-image: url("img/colorful\ wave\ background_1\ copy.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* bottom background image rotated and partially visible */
+  body::after {
+    content: "";
+    position: fixed;
+    bottom: 520px;
+    left: 20%;
+    transform: translateX(-50%) rotate(-90deg);
+    transform-origin: center;
+    width: 140%;
+    height: 220px;
+    background-image: url("img/colorful\ wave\ background_2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* ensure links and headings still visible */
+  a:link, a:visited {
+    color: #1e1e1e;
+  }
+
 }
 
 

@@ -229,7 +229,180 @@ p{
   line-height: 1.6;
   margin-top: 20px;
   
+}
+
+@media (max-width: 600px) {
+
+  /* replace/override navigation rules on mobile so title appears above links */
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* stack title and links vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;             /* allow height to grow with content */
+    padding: 8px 12px;
+    margin: 0;
+    gap: 6px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
   }
+
+  /* force the title to render above the nav links */
+  .title-left {
+    display:none;
+    order: -1;               /* place before .menu-items */
+    margin: 20px;
+    padding: 2px 6px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  /* nav links come after the title */
+  .menu-items {
+    order: 1;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0px;
+  }
+
+  /* ensure page content sits below the fixed nav */
+  .cont_projects, .container {
+    padding-top: 84px; /* nav height + spacing */
+    margin: 0 auto;
+    width: 95%;
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  /* heading: larger, centered, constrained with 20px side margins */
+  .heading-projects {
+    font-size: 32px;
+    text-align: center;
+    margin: 16px 20px;
+    width: calc(100% - 40px);
+    line-height: 1.05;
+  }
+
+  /* lists: more compact and easier to tap */
+  ul {
+    margin-left: 0;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+
+  li {
+    margin: 12px 10px;
+  }
+
+  a.list {
+    font-size: 18px;
+    display: block;
+    padding: 10px 6px;
+    border-radius: 10px;
+  }
+
+  /* make images responsive */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* replace desktop background with a faint rotated pseudo-element so it's visible but subtle */
+  body, html {
+    background-image: none;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-12deg);
+    width: 130%;
+    height: 260px;
+    background-image: url("img/background_projects.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.16;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ensure content appears above the pseudo background */
+  .slide-16-9-10,
+  .container,
+  .cont_projects {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Final page responsive tweaks */
+  .texts {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  /* Make images responsive and override inline widths */
+  img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 12px auto !important;
+  }
+
+  /* Make iframe embeds responsive (override fixed width/height attributes) */
+  iframe {
+    width: 100% !important;
+    height: 60vh !important;
+    max-height: 800px;
+    border: none;
+  }
+
+  /* Make video elements responsive */
+  video {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+
+  /* Slightly reduce paragraph font-size for mobile and improve line-height */
+  .texts p,
+  .container p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 12px;
+  }
+
+  /* Ensure long code blocks wrap or stay within viewport */
+  pre code {
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  /* Prevent any remaining fixed-width elements from overflowing */
+  .slide-16-9-10 iframe,
+  .slide-16-9-10 video,
+  .slide-16-9-10 img {
+    max-width: 100%;
+  }
+
+}
 
 
 
