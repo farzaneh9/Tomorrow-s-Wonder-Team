@@ -1,0 +1,232 @@
+/* body{
+   background-color: #dfd7a6;
+} */
+
+body{
+  background-image:url(img/background_projects.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position:top right;
+  background-position-y: -100px;
+  /* background-attachment: fixed; */
+  font-family: "Inter", sans-serif;
+} 
+
+.slide-16-9-7, .slide-16-9-7 * {
+    box-sizing: border-box;
+   
+    }
+
+.team{
+   width: 70%;
+   margin: 0 auto;
+   align-items: center; 
+   text-align: center;
+
+}
+
+.row .row-cols-1 .row-cols-md-3 .g-4{
+   margin: 0;
+   align-items: center; 
+}
+
+
+
+.meet-the-team {
+   /* background: -webkit-linear-gradient(rgb(24, 140, 236), rgb(182, 55, 93));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent; */
+   /* color: #1e1e1e; */
+    text-align: center;
+    font: 400 32px/120% 'Poppins', sans-serif;
+    /* position: absolute;
+    left: 100px;
+   top: 75px;
+    width: 547px; */
+    margin: 50px 0;
+    
+    
+   }
+
+/* .member-1 {
+   display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 387px;
+    height: 255px;
+    min-width: 320px;
+    position: absolute;
+    left: 100px;
+   top: 210px;
+   } */
+
+.image {
+   align-self: stretch;
+   flex: 1;
+    position: relative;
+    width: 400px;
+    height: 250px;
+    /* border-radius: 10px; */
+    padding: 10px 40px 10px 40px;
+    border-left: 0px solid #1e1e1e;
+    border-right: 0px solid #1e1e1e;
+   }
+
+.title-description {
+   display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+
+
+.project-title {
+   color: var(--black, #2d2d2d);
+    text-align: center;
+    font: var(--subtitle, 600 20px/30px 'Epilogue', sans-serif);
+    position: relative;
+    align-self: stretch;
+   }
+
+
+
+.title-description2 {
+   display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+
+
+   .team-members{
+    display: grid;
+    grid-column: 3;
+    
+   }
+
+.vector-4 {
+   position: absolute;
+    left: 1440px;
+   top: 144px;
+    transform: translate(-1440px, -0.5px);
+    overflow: visible;
+   }
+
+.navigation {
+  padding: 24px 42px 10px 42px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #383434;
+  margin: 20px 50px;
+  
+  
+}
+
+    
+    .menu-items {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: center;
+      justify-content: flex-end;
+      flex-shrink: 0;
+      position: relative;
+      color:#383434;
+      
+    }
+
+
+    .card-img-top{
+      padding: 35px;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      border-radius: 70px;
+    }
+
+    .card:hover{
+      cursor: pointer;
+      background: linear-gradient(white, white) padding-box,
+      linear-gradient(to right, rgb(24, 140, 236), rgb(213, 57, 89)) border-box;
+     /* border-radius: 50em; */
+     border: 2px solid transparent;
+
+    }
+
+    a:link{
+      text-decoration: none;
+      color: #383434;
+      font-size: 16px;
+      font-family: Lato,Hind Siliguri,open sans,Helvetica,Helvetica Neue,sans-serif,Microsoft Yahei;
+    }
+
+    a:visited{
+      text-decoration: none; 
+      color: #383434;
+    }
+
+    .nav-link:hover{
+      
+    }
+
+    .card-title{
+      text-decoration: none;
+    }
+
+    img:hover{
+   -webkit-filter: none;
+    }
+
+
+    .animate-charcter-2
+    {
+       text-transform: uppercase;
+      background-image: linear-gradient(
+        -225deg,
+       
+        #3361c3 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #ffa200 100%
+      );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 100% auto;
+      color: #420b0b;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 1.8s linear infinite;
+      display: inline-block;
+      font-weight: bold;
+         
+    }
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+
+    
+
+
+
+
+

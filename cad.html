@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" type="text/css" href="projects.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>CAD Design</title>
+<style>
+    /* .texts{
+        
+        margin: 20px 50px;
+    } */
+
+    ul{
+        list-style:circle;
+        margin-left: -30px;
+    }
+
+    li{
+        font-size: 16px;
+        margin: 0;
+        font-weight:400;
+    }
+
+    .steps{
+     font-size: 22px;
+     font-weight: bold;
+    }
+
+    p{
+        /* font-size: 18px;   */
+    }
+
+    h2{
+        padding: 60px  0  0 0px;
+        
+        
+
+    }
+
+    h3{
+        margin-bottom: 40px;
+    }
+
+   
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="header-color">
+				
+	
+        <div class="navigation" >
+            
+                <div class="menu-items" >
+                    <a href="index.html" class="nav-link projects" >
+                    Home
+                        </a>
+                        <a href="projects.html" class="nav-link ">
+							<span class="animate-charcter-2">Assignments</span> 
+							</a>
+                    <a href="team.html" class="nav-link members" >
+                    Members
+                    </a>
+                    <a href="final.html" class="nav-link school">
+                    Final Project
+                    </a>
+                </div>
+                <p class="title-left"><b>ZJU-Design</b> Engineering</p>
+        </div>
+    </div>
+
+<div class="container"> 
+
+    
+			<div class="texts">
+
+				<h2 class="task-title animate-charcter-2">CAD Design</h2>
+    <hr>
+				
+                <h3>An introduction to AutoCad</h3>
+       <img src="img/CAD/Picture1.jpg" alt=""> 
+       <p>
+       <h4>Introduction</h4> 
+Learning to use a CAD system is similar to learning a new language. It is necessary to begin with the basic alphabet and learn how to use it correctly and effectively through practice. This will require learning some new concepts and skills as well as learning a different vocabulary. Today, the majority of the Mechanical CAD systems are capable of creating three-dimensional solid models. Nonetheless, all CAD systems create designs using basic geometric entities, and many of the constructions used in technical designs are based upon two-dimensional planar geometry. The method and number of operations that are required to accomplish the basic planar constructions are different from one system to another.
+
+       </p>
+       <p>
+        In order to become effective and efficient in using a CAD system, we must learn to create geometric entities quickly and accurately. In learning to use a CAD system, lines and circles are the first two, and perhaps the most important two, geometric entities that one should master the skills of creating and modifying. Straight lines and circles are used in almost all technical designs. In examining the different types of planar geometric entities, the importance of lines and circles becomes obvious. Triangles and polygons are planar figures bounded by straight lines. Ellipses and splines can be constructed by connecting arcs with different radii. As one gains some experience in creating lines and circles, similar procedures can be applied to create other geometric entities. In this tutorial, the different ways of creating lines and circles in AutoCAD 2021 are examined.
+
+       </p>
+       <p>
+        <b>Starting Up AutoCAD</b> <br>
+1. Select the AutoCAD option on the Program menu or select the AutoCAD icon on the Desktop.
+<br> Click Start Drawing to start a new drawing.
+<img src="img/CAD/Picture3.png" alt="" style=" width: 320px;">
+<img src="img/CAD/Picture4.png" alt="" style=" width: 320px;">
+       </p>
+<p>
+    Once the program is loaded into memory, the AutoCAD main drawing screen will appear on the screen.
+</p>
+<p>
+    Note that AutoCAD automatically assigns generic names, Drawing X, as new drawings are created. In our example, AutoCAD opened the graphics window using the default system units and assigned the drawing name Drawing1.
+
+</p>
+<img src="img/CAD/Picture5.png" alt="">
+<p>
+    1. If necessary, click on the down-arrow in the Quick Access bar and select Show Menu Bar to display the AutoCAD Menu Bar. The Menu Bar provides access to all AutoCAD commands.
+</p>
+<img src="img/CAD/Picture6.png" alt="" style=" width: 320px;">
+<img src="img/CAD/Picture7.png" alt="" style=" width: 320px;">
+
+<p>
+    2. To switch on the AutoCAD Coordinates Display, use the Customization option at the bottom right corner.
+
+</p>
+<img src="img/CAD/Picture8-1.png" alt="">
+
+<h4>
+    Drawing Units Setup
+</h4>
+<p>
+    Every object we construct in a CAD system is measured in units. We should determine the system of units within the CAD system before creating the first geometric entities.
+
+</p>
+
+
+<p>
+    1. In the Menu Bar select:
+[Format] --> [Units]
+<br>The AutoCAD Menu Bar contains multiple pull- down menus where all of the AutoCAD commands can be accessed. Note that many of the menu items listed in the pull-down menus can also be accessed through the Quick Access toolbar and/or Ribbon panels.
+
+</p>
+<img src="img/CAD/Picture8.png" alt="" style=" width: 300px;">
+<p>
+    2. Click on the Length Type option to display the different types of length units available. Confirm the Length Type is set to Decimal.
+
+</p>
+<img src="img/CAD/Picture9.png" alt="" style=" width: 350px;">
+<p>
+   3. Also note the Insertion Scale section will show the default measurement system, such as the English units, inches.
+</p>
+<img src="img/CAD/Picture11.png" alt="" style=" width: 300px;">
+
+<p>
+    4. Set the Precision to two digits after the decimal point as shown in the above figure. 
+
+<br>Pick OK to exit the Drawing Units dialog box.
+<img src="img/CAD/Picture12.png" alt="" style=" width: 350px;">
+</p>
+
+    <h4>Drawing Area Setup</h4>
+<p>Next, we will set up the Drawing Limits by entering a command in the command prompt area. Setting the Drawing Limits controls the extents of the display of the grid. It also serves as a visual reference that marks the working area. It can also be used to prevent construction outside the grid limits and as a plot option that defines an area to be plotted and/or printed. Note that this setting does not limit the region for geometry construction.
+
+</p>
+<img src="img/CAD/Picture13.png" alt="" style=" width: 700px;">
+
+<p>
+    3. In the command prompt area, the message “Specify upper right corner <12.00,9.00>:” is displayed. Press the ENTER key again to accept the default coordinates <12.00,9.00>.
+
+</p>
+<img src="img/CAD/Picture14.png" alt="" style=" width: 500px;">
+
+<h4>Drawing Lines with the Line Command
+</h4>
+<p>
+    1. Move the graphics cursor to the first icon in the Draw panel. This icon is the Line icon. Note that a brief description of the Line command appears next to the cursor.
+
+</p>
+<img src="img/CAD/Picture15.png" alt="" style=" width: 300px;">
+<p>
+    2. Select the icon by clicking once with the left- mouse-button, which will activate the Line command.
+    <br>
+<br>3. In the command prompt area, near the bottom of the AutoCAD drawing screen, the message “_line Specify first point:” is displayed. AutoCAD expects us to identify the starting location of a straight line. Move the graphics cursor inside the graphics window and watch the display of the coordinates of the graphics cursor at the bottom of the AutoCAD drawing screen. 
+<br>The three numbers represent the location of the cursor in the X, Y, and Z directions. We can treat the graphics window as if it was a piece of paper, and we are using the graphics cursor as if it was a pencil with which to draw.
+
+</p>
+<img src="img/CAD/Picture16.png" alt="" style=" width: 500px;">
+
+<p>
+    We will create a freehand sketch of a five- point star using the Line command. Do not be overly concerned with the actual size or accuracy of your freehand sketch. This exercise is to give you a feel for the AutoCAD user interface.
+
+</p>
+<img src="img/CAD/Picture17.png" alt="" style=" width: 400px;">
+
+<p>
+   1. We will start at a location about one-third from the bottom of the graphics window. Left-click once to position the starting point of our first line. This will be point 1 of our sketch. Next, move the cursor upward and toward the right side of point
+
+</p>
+<p>
+   2. Notice the rubber-band line that follows the graphics cursor in the graphics window. Left-click again (point 2) and we have created the first line of our sketch.
+
+</p>
+<img src="img/CAD/Picture18.png" alt="" style=" width: 400px;">
+<p>
+3. Move the cursor to the left of point 2 and create a horizontal line about the same length as the first line on the screen.
+
+</p>
+<img src="img/CAD/Picture19.png" alt="" style=" width: 400px;">
+
+<p>
+   4. Repeat the above steps and complete the freehand sketch by adding three more lines (from point 3 to point 4, point 4 to point 5, and then connect to point 5 back to point 1).
+
+</p>
+<img src="img/CAD/Picture20.png" alt="" style=" width: 400px;">
+
+<p>
+   5. Notice that the Line command remains activated even after we connected the last segment of the line to the starting point (point 1) of our sketch. Inside the graphics window, click once with the right-mouse-button and a pop-up menu appears on the screen.
+
+</p>
+<img src="img/CAD/Picture21.png" alt="" style=" width: 250px;">
+<p>
+   6. Select Enter with the left-mouse-button to end the Line command. (This is equivalent to hitting the [ENTER] key on the keyboard.)
+
+</p>
+<p>
+   7. Select Enter with the left-mouse-button to end the Line command. (This is equivalent to hitting the [ENTER] key on the keyboard.)
+
+</p>
+
+
+</div>
+</div>
+    
+</body>
+</html>
