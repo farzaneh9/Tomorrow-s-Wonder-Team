@@ -107,8 +107,6 @@ body{
   flex-wrap: wrap;
   color: #383434;
   margin: 20px 50px;
-  
-  
 }
 
     
@@ -203,7 +201,6 @@ body{
 
     @media (max-width: 600px) {
 
-  /* navigation: stacked, compact and centered */
   .navigation {
     position: fixed;
     top: 0;
@@ -215,7 +212,7 @@ body{
     align-items: center;
     justify-content: center;
     height: auto;             /* allow height to grow with content */
-    padding: 8px 12px;
+    padding: 6px 10px; /* give more usable width */
     margin: 0;
     gap: 6px;
     background: rgba(255,255,255,0.95);
@@ -228,16 +225,36 @@ body{
     display: none;
   }
 
-  /* menu items centered and wrapped */
-   .menu-items {
+  /* keep all menu items in one horizontal row, shrink font, allow horizontal scroll if needed */
+  .menu-items {
     order: 1;
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;          /* prevent wrapping */
+    gap: 6px;                   /* smaller gap to fit more items */
+    justify-content: space-between; /* distribute available space */
     align-items: center;
-    margin: 32px 0px;
+    margin: 8px 4px;
+    width: calc(100% - 20px);
+    padding: 0 6px;
+    /* no overflow-x */
   }
-  
+
+  .menu-items a {
+    display: inline-block;
+    flex: 1 1 auto;             /* allow links to shrink/grow to fit */
+    min-width: 0;               /* allow shrinking below intrinsic width */
+    padding: 6px 8px;
+    text-align: center;
+    font-size: clamp(11px, 3vw, 14px);
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;    /* hide overflow text */
+    white-space: nowrap;
+  }
+
+  /* remove scroll bar styling since no scrolling */
+  .menu-items::-webkit-scrollbar { display: none; }
 
   /* place content below fixed nav and center everything */
   .container,

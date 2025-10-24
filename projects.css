@@ -1,9 +1,6 @@
 /* Ensure both pages use the same anchored background positioning */
 body, html {
   height: 100%;
-  /* margin: 0; */
-  
- 
 }
 
 body{
@@ -26,9 +23,7 @@ body{
   
 }
 .heading-projects {
-  /* background: -webkit-linear-gradient(rgb(24, 140, 236), rgb(182, 55, 93));
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent; */
+  
   text-align: left;
   font: 400 32px/120% "Inter", sans-serif;
   margin: 50px 0 20px 10px ;
@@ -62,7 +57,7 @@ body{
   flex-wrap: wrap;
   color: #383434;
   margin: 20px 50px;
-  position: relative;
+  
   
 }
 
@@ -93,7 +88,7 @@ a:link{
   text-decoration: none;
   color: #383434;
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: Lato,Hind Siliguri,open sans,Helvetica,Helvetica Neue,sans-serif,Microsoft Yahei;
   
 }
 
@@ -242,13 +237,13 @@ p{
     top: 0;
     left: 0;
     right: 0;
-    /* stack title and links vertically */
+    /* keep nav compact to gain width for menu */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto;             /* allow height to grow with content */
-    padding: 8px 12px;
+    height: auto;
+    padding: 6px 10px; /* slightly smaller to gain width */
     margin: 0;
     gap: 6px;
     background: rgba(255,255,255,0.95);
@@ -256,25 +251,42 @@ p{
     z-index: 9999;
   }
 
-  /* force the title to render above the nav links */
+  /* hide the extra title on mobile to save space */
   .title-left {
-    display:none;
-    order: -1;               /* place before .menu-items */
-    margin: 20px;
-    padding: 2px 6px;
-    text-align: center;
-    font-weight: 400;
+    display: none;
   }
 
-  /* nav links come after the title */
+  /* force the menu items to stay in one horizontal row, shrink font, allow horizontal scroll if needed */
   .menu-items {
     order: 1;
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;          /* prevent wrapping */
+    gap: 6px;                   /* smaller gap to fit more items */
+    justify-content: space-between;
     align-items: center;
-    margin: 32px 0px;
+    margin: 8px 4px;            /* compact margins */
+    width: calc(100% - 20px);
+    padding: 0 6px;
+    
   }
+
+  .menu-items a {
+    display: inline-block;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 6px 8px;
+    text-align: center;
+    /* responsive font size: shrinks on narrow screens but remains readable */
+    font-size: clamp(11px, 3vw, 14px);
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* optional: minimal scrollbar styling (webkit) */
+  .menu-items::-webkit-scrollbar { display: none; }
 
   /* ensure page content sits below the fixed nav */
   .cont_projects, .container {
