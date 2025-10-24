@@ -296,7 +296,7 @@ p{
     max-width: 720px;
     position: relative;
     z-index: 2;
-    text-align: center;
+    /* text-align: center; */
   }
 
   /* heading: larger, centered, constrained with 20px side margins */
