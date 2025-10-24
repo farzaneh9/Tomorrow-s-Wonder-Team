@@ -45,10 +45,13 @@ body{
 .container *{
  max-width: 800px;
  justify-content: center;
- 
- 
+}
+
+.nav-link {
+  text-transform: uppercase;
 
 }
+
 .navigation {
   padding: 24px 42px 10px 42px;
   display: flex;
@@ -59,7 +62,7 @@ body{
   flex-wrap: wrap;
   color: #383434;
   margin: 20px 50px;
-  
+  position: relative;
   
 }
 
