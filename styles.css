@@ -292,7 +292,7 @@ transform: translateY(-2px); /* Slight lift effect */
   body::before {
     content: "";
     position: fixed;
-    top: 500px;
+    top: 450px;
     left: 50%;
     transform: translateX(-50%) rotate(-90deg);
     transform-origin: center;
